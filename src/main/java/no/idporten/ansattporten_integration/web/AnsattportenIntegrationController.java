@@ -22,4 +22,9 @@ public class AnsattportenIntegrationController {
         model.addAttribute("name", oidcUser.getFullName());
         return "ansattporten-authenticated";
     }
+
+    @GetMapping("/logout/callback")
+    public String logoutCallback() {
+        return "logout";
+    }
 }
